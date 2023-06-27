@@ -1,0 +1,62 @@
+p,
+h1 {
+  color: black;
+}
+
+body {
+  background-color: rgb(241, 186, 186);
+  min-height: 100vh;
+}
+
+.ProductSec img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  -webkit-box-shadow: 6px 8px 26px 6px #000000;
+  -moz-box-shadow: 6px 8px 26px 6px #000000;
+  -o-box-shadow: 6px 8px 26px 6px #000000;
+  box-shadow: 6px 8px 26px 6px #000000;
+  margin-bottom: 20px;
+}
+
+.ProductSec {
+  padding: 0 30px;
+}
+
+.ProductSec p {
+  font-size: 0.9rem;
+  color: rgb(87, 87, 87);
+}
+
+.ProductSec__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ProductSec__text,
+.productionIngredients {
+  padding: 0 30px;
+}
+
+.productionIngredients {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.productionIngredients li {
+  background-color: rgb(230, 143, 143);
+  border-radius: 12px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.ProductSec__text h1,
+p {
+  margin: 0;
+}
+
+.productionInstructions {
+  font-style: italic;
+}
