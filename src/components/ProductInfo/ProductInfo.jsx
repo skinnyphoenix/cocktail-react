@@ -1,12 +1,18 @@
-import "./ProductSection.css";
-import { GET } from "../../utils/HTTP";
+import "./ProductInfo.css";
+import { GETDrinkById } from "../../utils/HTTP";
 import { useState, useEffect } from "react";
 
-const ProductSection = ({ productSection }) => {
+const ProductInfo = ({ id, setShowCard, setInputValue }) => {
+  const onHandleShow = () => {
+    setShowCard(false);
+    setInputValue("");
+  };
+
   const [productData, setProductData] = useState({});
+  // console.log(productData);
 
   useEffect(() => {
-    GET("?s=" + productSection).then((data) => setProductData(data.drinks[0]));
+    GETDrinkById(id).then(({ drinks }) => setProductData(drinks));
   }, []);
 
   return (
@@ -29,9 +35,11 @@ const ProductSection = ({ productSection }) => {
         </ul>
 
         <p className="productionInstructions">{productData.strInstructions}</p>
+
+        <button onClick={onHandleShow}>Close</button>
       </div>
     </>
   );
 };
 
-export default ProductSection;
+export default ProductInfo;
