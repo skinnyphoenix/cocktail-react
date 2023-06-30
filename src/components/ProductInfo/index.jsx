@@ -1,3 +1,3 @@
-import ProductSection from "./ProductSection";
+import ProductInfo from "./ProductInfo";
 
-export default ProductSection;
+export default ProductInfo;
